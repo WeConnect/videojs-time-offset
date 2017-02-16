@@ -205,10 +205,6 @@ var onPlayerReady = function onPlayerReady(player, options) {
       }
     }
   });
-
-  player.on('loadstart', function () {
-    isEndedTriggered = true;
-  });
 };
 
 /**
@@ -237,8 +233,8 @@ _videoJs2['default'].plugin('timeOffset', timeOffset);
 // Include the version number.
 timeOffset.VERSION = '0.0.2';
 
-exports.timeOffset = timeOffset;
-exports.onPlayerReady = onPlayerReady;
+exports['default'] = timeOffset;
+module.exports = exports['default'];
 }).call(this,typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {})
 },{}]},{},[1])(1)
 });

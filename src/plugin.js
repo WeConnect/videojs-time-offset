@@ -183,10 +183,6 @@ const onPlayerReady = (player, options) => {
       }
     }
   });
-
-  player.on('loadstart', () => {
-    isEndedTriggered = true;
-  })
 };
 
 /**
@@ -213,4 +209,4 @@ videojs.plugin('timeOffset', timeOffset);
 // Include the version number.
 timeOffset.VERSION = '0.0.2';
 
-export { timeOffset, onPlayerReady };
+export default timeOffset;
