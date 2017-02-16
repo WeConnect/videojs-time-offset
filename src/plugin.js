@@ -183,6 +183,10 @@ const onPlayerReady = (player, options) => {
       }
     }
   });
+
+  player.on('loadstart', () => {
+    isEndedTriggered = true;
+  })
 };
 
 /**
