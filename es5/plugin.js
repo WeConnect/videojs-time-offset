@@ -218,7 +218,7 @@ var onPlayerReady = function onPlayerReady(player, options) {
 var timeOffset = function timeOffset(options) {
   var _this = this;
 
-  this.ready(function () {
+  this.on('loadstart', function () {
     onPlayerReady(_this, _videoJs2['default'].mergeOptions(defaults, options));
   });
 };

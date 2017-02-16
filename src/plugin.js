@@ -202,7 +202,7 @@ const onPlayerReady = (player, options) => {
  *           An object of options left to the plugin author to define.
  */
 const timeOffset = function(options) {
-  this.ready(() => {
+  this.on('loadstart', () => {
     onPlayerReady(this, videojs.mergeOptions(defaults, options));
   });
 };
