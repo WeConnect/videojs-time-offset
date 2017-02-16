@@ -218,7 +218,7 @@ var onPlayerReady = function onPlayerReady(player, options) {
 var timeOffset = function timeOffset(options) {
   var _this = this;
 
-  this.on('loadstart', function () {
+  this.ready(function () {
     onPlayerReady(_this, _videoJs2['default'].mergeOptions(defaults, options));
   });
 };
@@ -229,5 +229,5 @@ _videoJs2['default'].plugin('timeOffset', timeOffset);
 // Include the version number.
 timeOffset.VERSION = '0.0.2';
 
-exports['default'] = timeOffset;
-module.exports = exports['default'];
+exports.timeOffset = timeOffset;
+exports.onPlayerReady = onPlayerReady;

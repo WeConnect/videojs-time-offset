@@ -202,7 +202,7 @@ const onPlayerReady = (player, options) => {
  *           An object of options left to the plugin author to define.
  */
 const timeOffset = function(options) {
-  this.on('loadstart', () => {
+  this.ready(() => {
     onPlayerReady(this, videojs.mergeOptions(defaults, options));
   });
 };
@@ -213,4 +213,4 @@ videojs.plugin('timeOffset', timeOffset);
 // Include the version number.
 timeOffset.VERSION = '0.0.2';
 
-export default timeOffset;
+export { timeOffset, onPlayerReady };
